@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pypatternfinder',
-    version='1.0.0',
+    version='1.0.1',
     packages=['pypatternfinder'],
     url='https://www.github.com/FaithBeam/pypatternfinder',
     license='MIT',

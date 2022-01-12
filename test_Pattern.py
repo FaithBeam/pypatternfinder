@@ -1,6 +1,5 @@
 from unittest import TestCase
-from pypatternfinder.pattern import transform, find, find_all, scan, Byte, Nibble
-from pypatternfinder.signature import Signature
+from pypatternfinder.pattern import transform, find, find_all, scan, Byte, Nibble, Signature
 
 
 class Test(TestCase):
@@ -76,3 +75,7 @@ class Test(TestCase):
     def test_nibble(self):
         my_nibble = Nibble()
         self.assertIsInstance(my_nibble, Nibble)
+
+    def test_signature(self):
+        my_sig = Signature()
+        self.assertIsInstance(my_sig, Signature)

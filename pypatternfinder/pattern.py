@@ -1,6 +1,5 @@
 from copy import deepcopy
-from typing import Tuple
-from pypatternfinder.signature import Signature
+from typing import Tuple, Optional
 
 
 class Byte:
@@ -11,8 +10,18 @@ class Byte:
 
 class Nibble:
     def __init__(self):
-        self.wildcard = None
-        self.data = None
+        self.wildcard: Optional[bool] = None
+        self.data: Optional[int] = None
+
+
+class Signature:
+    def __init__(self):
+        self.name: Optional[str] = None
+        self.pattern: Optional[list[Byte]] = None
+        self.found_offset = -1
+
+    def __str__(self):
+        return self.name
 
 
 def __format_pattern(pattern: str) -> str:
